@@ -4,19 +4,6 @@ import { Meal } from './meal.model';
 @Component({
   selector: 'meal-list',
   template: `
-  <div>
-    <h3>Week Ending: </h3>
-    <select id="weekSelect">
-      <option value="10/23">October 23rd</option>
-      <option value="10/30">October 30th</option>
-      <option value="11/6">November 6th</option>
-      <option value="11/13">November 13th</option>
-      <option value="11/20">November 20th</option>
-      <option value="11/27">November 27th</option>
-      <option value="12/4">December 4th</option>
-    </select>
-  </div>
-  <br>
   <div class="row">
     <div class="col-xs-6">
       <select (change)="onChangeCalories($event.target.value)" class="filter form-control">

@@ -1,8 +1,58 @@
+$darkblue : rgba(43, 77, 120, 0.5);
+$darkerblue : rgba(24, 42, 66, 0.5);
 body {
+  color: white;
   text-align: center;
+  background-image: url(../../resources/img/background-image.jpg);
+  font-family: monstserrat, verdana;
+}
+
+select {
+  margin: 5px;
+  box-sizing: border-box;
+}
+
+input {
+  margin: 5px;
+}
+
+#new-meal-form, #editMeal  {
+  background: $darkblue;
+  width: 400px;
+  margin: 50px auto;
+  border: 0 none;
+  padding: 20px;
+}
+
+#new-meal-form input, #new-meal-form select, #editMeal input, #editMeal select{
+  width: 100%;
+  color: black;
+}
+
+option, select {
+  color: black;
+}
+
+.table-striped {
+  font-size: 16px;
+}
+.table-striped > tbody > tr:nth-of-type(odd) {
+  background-color: $darkblue;
+}
+
+.table-striped > tbody > tr:nth-of-type(even) {
+  background-color: $darkerblue;
 }
 
 .filter {
   margin: 20px;
   text-align: center;
+}
+
+.jumbotron {
+  background: $darkblue
+}
+
+.btn {
+  color: black;
 }

@@ -4,6 +4,7 @@ import { Meal } from './meal.model';
 @Component({
   selector: 'new-meal',
   template: `
+  <form id="new-meal-form">
     <h1>Add New Meal</h1>
     <label>Day: </label>
     <select #newDay>
@@ -15,6 +16,7 @@ import { Meal } from './meal.model';
       <option value="Saturday">Saturday</option>
       <option value="Sunday">Sunday</option>
     </select>
+    <br>
     <label>Meal Type: </label>
     <select #newType>
       <option value="Breakfast">Breakfast</option>
@@ -22,14 +24,19 @@ import { Meal } from './meal.model';
       <option value="Dinner">Dinner</option>
       <option value="Snack">Snack</option>
     </select>
+    <br>
     <label>Meal Name: </label>
     <input #newName type="text">
+    <br>
     <label>Meal Description: </label>
     <input #newDescription type="text">
+    <br>
     <label>Calories: </label>
     <input #newCalories type="number" step="1" min="0">
+    <br>
     <button class="btn" (click)="addClicked(newName.value, newDescription.value, newType.value, newDay.value, newCalories.value)">Add</button>
-    `
+  </form>
+  `
 })
 
 export class newMealComponent {
