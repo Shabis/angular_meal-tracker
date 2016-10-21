@@ -5,7 +5,7 @@ import { Meal } from './meal.model';
   selector: 'my-meal-tracker',
   template: `
   <div class="jumbotron">
-    <h1>Meal Log</h1>
+    <img class="logo" src="../../resources/img/logo.png">
   </div>
   <div class="container">
     <meal-list

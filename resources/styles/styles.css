@@ -5,6 +5,7 @@ body {
   text-align: center;
   background-image: url(../../resources/img/background-image.jpg);
   font-family: monstserrat, verdana;
+  white-space: normal;
 }
 
 select {
@@ -33,6 +34,10 @@ option, select {
   color: black;
 }
 
+img {
+  -webkit-filter: brightness(150%);
+}
+
 .table-striped {
   font-size: 16px;
 }
@@ -50,7 +55,7 @@ option, select {
 }
 
 .jumbotron {
-  background: $darkblue
+  background: $darkerblue
 }
 
 .btn {

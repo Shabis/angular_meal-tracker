@@ -14,6 +14,7 @@ import { Meal } from './meal.model';
     </div>
     <div class="col-xs-6">
       <select (change)="onChangeDay($event.target.value)" class="filter form-control">
+        <option value="all">All</option>
         <option value="Monday">Monday</option>
         <option value="Tuesday">Tuesday</option>
         <option value="Wednesday">Wednesday</option>
