@@ -12,6 +12,7 @@ import { Meal } from './Meal.model';
         <th>Type</th>
         <th>Day</th>
         <th>Calories</th>
+        <th></th>
       </tr>
       <tr *ngFor="let currentMeal of childMealList">
         <td>{{ currentMeal.name }}</td>
