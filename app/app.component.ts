@@ -4,6 +4,9 @@ import { Meal } from './meal.model';
 @Component({
   selector: 'my-meal-tracker',
   template: `
+  <div class="jumbotron">
+    <h1>Meal Log</h1>
+  </div>
   <div class="container">
     <meal-list
       [childMealList]="masterMealList"

@@ -1,3 +1,8 @@
 body {
   text-align: center;
 }
+
+.filter {
+  margin: 20px;
+  text-align: center;
+}

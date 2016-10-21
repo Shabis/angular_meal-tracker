@@ -4,11 +4,39 @@ import { Meal } from './meal.model';
 @Component({
   selector: 'meal-list',
   template: `
-  <select (change)="onChangeCalories($event.target.value)" class="filter form-control">
-    <option value="all">All Meals</option>
-    <option value="low">Low Calorie Meals</option>
-    <option value="high">High Calorie Meals</option>
-  </select>
+  <div>
+    <h3>Week Ending: </h3>
+    <select id="weekSelect">
+      <option value="10/23">October 23rd</option>
+      <option value="10/30">October 30th</option>
+      <option value="11/6">November 6th</option>
+      <option value="11/13">November 13th</option>
+      <option value="11/20">November 20th</option>
+      <option value="11/27">November 27th</option>
+      <option value="12/4">December 4th</option>
+    </select>
+  </div>
+  <br>
+  <div class="row">
+    <div class="col-xs-6">
+      <select (change)="onChangeCalories($event.target.value)" class="filter form-control">
+        <option value="all">All Meals</option>
+        <option value="low">Low Calorie Meals</option>
+        <option value="high">High Calorie Meals</option>
+        </select>
+    </div>
+    <div class="col-xs-6">
+      <select (change)="onChangeDay($event.target.value)" class="filter form-control">
+        <option value="Monday">Monday</option>
+        <option value="Tuesday">Tuesday</option>
+        <option value="Wednesday">Wednesday</option>
+        <option value="Thursday">Thursday</option>
+        <option value="Friday">Friday</option>
+        <option value="Saturday">Saturday</option>
+        <option value="Sunday">Sunday</option>
+      </select>
+    </div>
+  </div>
   <div class="table-responsive">
     <table class="meals table table-striped">
       <tr>
@@ -19,7 +47,7 @@ import { Meal } from './meal.model';
         <th>Calories</th>
         <th></th>
       </tr>
-      <tr *ngFor="let currentMeal of childMealList | calories:selectedCalories">
+      <tr *ngFor="let currentMeal of childMealList | calories:selectedCalories | day:selectedDay">
         <td>{{ currentMeal.day }}</td>
         <td>{{ currentMeal.type }}</td>
         <td>{{ currentMeal.name }}</td>
@@ -40,7 +68,12 @@ export class MealListComponent {
   }
 
   public selectedCalories: string = "all";
-  onChangeCalories(optionFromMenu) {
-    this.selectedCalories = optionFromMenu;
+  onChangeCalories(MenuOption) {
+    this.selectedCalories = MenuOption;
+  }
+
+  public selectedDay: string = "all";
+  onChangeDay(MenuOption) {
+    this.selectedDay = MenuOption;
   }
 }
