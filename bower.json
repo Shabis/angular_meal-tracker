@@ -1,0 +1,20 @@
+{
+  "name": "meal-tracker",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Shelby Clayton <Shelby_Clayton@hotmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/shabis/Angular_Meal-Tracker",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  }
+}
