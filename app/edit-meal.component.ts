@@ -6,17 +6,6 @@ import { Meal } from './meal.model';
   template: `
   <div *ngIf="childSelectedMeal" id="editMeal">
     <h1>Edit Meal</h1>
-    <label>Meal Name: </label>
-    <input [(ngModel)]="childSelectedMeal.name">
-    <label>Meal Description: </label>
-    <input [(ngModel)]="childSelectedMeal.description">
-    <label>Meal Type: </label>
-    <select [(ngModel)]="childSelectedMeal.type">
-      <option value="Breakfast">Breakfast</option>
-      <option value="Lunch">Lunch</option>
-      <option value="Dinner">Dinner</option>
-      <option value="Snack">Snack</option>
-    </select>
     <label>Day: </label>
     <select [(ngModel)]="childSelectedMeal.day">
       <option value="Monday">Monday</option>
@@ -27,6 +16,17 @@ import { Meal } from './meal.model';
       <option value="Saturday">Saturday</option>
       <option value="Sunday">Sunday</option>
     </select>
+    <label>Meal Type: </label>
+    <select [(ngModel)]="childSelectedMeal.type">
+      <option value="Breakfast">Breakfast</option>
+      <option value="Lunch">Lunch</option>
+      <option value="Dinner">Dinner</option>
+      <option value="Snack">Snack</option>
+    </select>
+    <label>Meal Name: </label>
+    <input [(ngModel)]="childSelectedMeal.name">
+    <label>Meal Description: </label>
+    <input [(ngModel)]="childSelectedMeal.description">
     <label>Calories: </label>
     <input [(ngModel)]="childSelectedMeal.calories" type="number" step="1" min="0">
     <button class="btn" (click)="doneClicked()">Done</button>

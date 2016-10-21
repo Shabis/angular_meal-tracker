@@ -22,9 +22,9 @@ import { Meal } from './meal.model';
 
 export class AppComponent {
   public masterMealList: Meal[] = [
-    new Meal("Speghetti", "One cup noodles with two meatballs", "dinner", "tuesday", 750),
-    new Meal("Oatmeal", "6oz oatmeal with 1/4 cup brown sugar", "breakfast", "thursday", 425),
-    new Meal("turkey sandwich", "4oz meat on whole wheat roll", "lunch", "saturday", 475)
+    new Meal("Tuesday", "Dinner", "Speghetti", "One cup noodles with two meatballs", 750),
+    new Meal("Thursday", "Breakfast", "Oatmeal", "6oz oatmeal with 1/4 cup brown sugar", 425),
+    new Meal("Saturday", "Lunch", "turkey sandwich", "4oz meat on whole wheat roll", 475)
   ];
 
   selectedMeal: Meal = null;
