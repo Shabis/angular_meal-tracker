@@ -12,13 +12,13 @@ import { Meal } from './meal.model';
       [childMealList]="masterMealList"
       (clickSender)="showDetails($event)"
     ></meal-list>
-    <new-meal
-      (newMealSender)="addMeal($event)"
-    ></new-meal>
     <edit-meal
       [childSelectedMeal]="selectedMeal"
       (doneClickedSender)="finishedEditing()"
     ></edit-meal>
+    <new-meal
+      (newMealSender)="addMeal($event)"
+    ></new-meal>
   </div>
   `
 })
