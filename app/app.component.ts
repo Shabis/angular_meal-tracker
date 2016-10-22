@@ -30,6 +30,7 @@ export class AppComponent {
     new Meal("Saturday", "Lunch", "turkey sandwich", "4oz meat on whole wheat roll", 475)
   ];
 
+
   selectedMeal: Meal = null;
   showDetails(clickedMeal: Meal) {
     this.selectedMeal = clickedMeal;

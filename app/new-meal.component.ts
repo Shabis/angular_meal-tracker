@@ -34,7 +34,7 @@ import { Meal } from './meal.model';
     <label>Calories: </label>
     <input #newCalories type="number" step="1" min="0">
     <br>
-    <button class="btn" (click)="addClicked(newName.value, newDescription.value, newType.value, newDay.value, newCalories.value)">Add</button>
+    <button class="btn" (click)="addClicked( newDay.value, newType.value, newName.value, newDescription.value, newCalories.value)">Add</button>
   </form>
   `
 })
