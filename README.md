@@ -2,7 +2,7 @@
 ------
 
 This application will allow a user to log their meals with descriptions and calories.
-
+![screenshot](screenshot.jpg)
 <br/>
 
 ### Setup/Installation Instructions
